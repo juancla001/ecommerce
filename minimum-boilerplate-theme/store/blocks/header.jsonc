@@ -1,0 +1,117 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop", 
+      "header-layout.mobile"
+    ]
+  },
+
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#desktop",
+      "global-styles",
+      "menu-top-header"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#desktop"
+      
+    ]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar",
+      "locale-switcher",
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "login":{
+    "props": {
+      "blockClass": "header_login1"
+    }
+  },
+  "search-bar":{
+    "props": {
+      "placeholder": "Buscar...",
+      "blockClass": ["header_searchBar", "search-bar-custom"],
+      "focusOnMount": true
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/images/store-theme-logo.png",
+      "width": "100"
+    }
+  },
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobile", "search-bar#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "flex-layout.col#logo-mobile",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+
+  "flex-layout.col#logo-mobile": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "search-bar#mobile":{
+    "props": {
+      "placeholder": "Buscar ...",
+      "width":"80%",
+      "blockClass": "header_searchBarMobile"
+    }
+  },
+  "drawer": {
+    "props":{
+      "blockClass": "drawer_mobile"
+    },
+    "children": ["menu-top-header"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "global-styles":{
+    "component": "GlobalStyles"
+  },
+  "menu-top-header": {
+    "component": "MenuLinkFull"
+  }
+}

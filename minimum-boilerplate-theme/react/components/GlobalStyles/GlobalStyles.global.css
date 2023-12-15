@@ -1,0 +1,39 @@
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .menu-nav li {
+    margin: 0 5px;
+  }
+  .menu-nav li:not(:last-child) {
+    margin-right: 10px; 
+  }
+  .menu-nav li:nth-child(-n+3) {
+    border-right: 2px solid rgb(188, 183, 26);
+    padding-right: 8px;
+
+  }
+
+.menu-url {
+    text-decoration: none;
+    color: #000;
+}
+
+
+@media (max-width: 1025px) {
+  .menu-nav {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    border: none !important;
+  }
+
+  .menu-nav li {
+    margin: 10px; 
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+}
